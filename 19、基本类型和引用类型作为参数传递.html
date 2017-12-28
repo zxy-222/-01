@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>基本类型和引用类型作为参数</title>
+</head>
+<body>
+  
+</body>
+<script>
+  //基本类型作为参数，变量的复制，改变其中一个对另一个不会有影响
+  var num = 50;
+  function f1(num){
+    num = 60;
+    console.log(num);//60
+  }
+  f1(num);
+  console.log(num); //50
+  console.log("-----生气的分隔线-------")
+  //引用类型做参数，两个变量复制，改变其中一个，会影响到另一个
+  function Person(name,age) {
+    this.name = name;
+    this.age =age;
+  }
+ function f2(p) {
+   p.name = "周一",
+   p.age = 19;
+   console.log(p.name); //周一
+ }
+ var p1 = new Person("周二",18);
+ console.log(p1.name);//周二
+ f2(p1);
+ console.log(p1.name+ p1.age);//周一
+</script>
+</html>

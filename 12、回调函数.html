@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>回调函数</title>
+</head>
+<body>
+  <script>
+    var num = 10;
+    var fn = function(){
+      console.log(1 +'、 ' + "fn");
+    }
+    //函数也是一种数据，也可以被当作参数传递
+    function fn1(a) {
+      console.log(a);
+      a();
+    }
+    fn1(fn);
+    //像这种fn被当作参数传递的函数叫做回调函数
+
+
+    function getSum (a,b) {
+      // return a + b;
+      console.log(3+"、" + (a + b))
+    }
+    function testGetSum (fn){
+      fn(1,2);
+    }
+    testGetSum(getSum);
+  </script>
+</body>
+
+</html>

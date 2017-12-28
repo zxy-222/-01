@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>this关键字</title>
+</head>
+<body>
+  
+</body>
+<script>
+  //1、全局上下文(在所有函数的外部)，this指的是全局对象Window
+  //2、函数上下文(在某个函数的内部)，this指的是当前函数所属的对象
+  var obj = {
+    fn:function () {
+      console.log(this);//此时this指的是obj
+    }
+  }
+  obj.fn();
+  function fn2 () {
+    console.log(this);
+  }
+  fn2();
+  //Window.fn2()
+  //此时this指的是全局对象Window
+</script>
+</html>

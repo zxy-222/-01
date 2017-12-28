@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>转为数值型</title>
+</head>
+<body>
+  
+</body>
+<script>
+  //1、Number
+  console.log(Number(true)); // 1
+  console.log(Number(false)); // 0
+  console.log(Number(null)); // 0
+  console.log(Number(undefined)); // NaN
+  console.log(Number("123px")); //NaN
+
+  //2、parseInt() 、 parseFloat()  //必须是以数字开头才能转成数字，而且遇到非数字就停止
+  console.log(parseInt("123px")); // 123
+  console.log(parseInt("123.23px")); //123
+  console.log(parseInt("px123")); // NaN
+  console.log(parseInt("123px5"));
+
+  console.log(parseFloat("123.23px5")); // 123.23
+  console.log(parseFloat("px123px5"));  // NaN
+
+  //3、隐式转换 可以用 - / % *;+不可以用，因为+是字符串拼接
+  console.log("123" - 0) // 123
+</script>
+</html>

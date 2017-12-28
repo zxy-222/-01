@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>for循环的两种方式</title>
+</head>
+<body>
+  
+</body>
+<script>
+  var arr = [1,2,3,4,5];
+  for (var i = 0; i < arr.length;i++){
+    console.log(arr[i]);//for循环适用于有序的集合
+  }
+  console.log("-----------华丽的分隔线-------------")
+  //for....in循环适用于所有情况
+  for(var key in arr) {
+    console.log("key:" + "" + key);
+    console.log("arr[key]:" + ""+arr[key]);
+  }
+  console.log("------------帅气的分隔线----------");
+  var obj = {
+    name: "周一",
+    age: 18,
+    sex: "男"
+  };
+  for (var k in obj){
+    console.log("key:" + ""+k);
+    console.log("obj[k]:" + "" +obj[k])
+    //不能写obj.k
+  }
+</script>
+</html>

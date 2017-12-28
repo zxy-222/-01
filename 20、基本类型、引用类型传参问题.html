@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  //第一题
+  function f1(a,b) {
+    a = a + 1;
+    b = b + 1;
+    console.log("a = " + a);
+    console.log("b = " + b);
+  }
+  console.log("-----无奈的分隔线------")
+  var x = 5;
+  var y = 6;
+  f1(x,y);
+  console.log("x = " + x);
+  console.log("y = " + y);
+console.log("^_^ ^_^ ^_^ ^_^ ^_^卖萌的分隔线^_^ ^_^ ^_^ ^_^ ^_^")
+  //第二题
+  function Person (name,age) {
+    this.name = name;
+    this.age = age;
+  }
+  function f2(p) {
+    p = new Person("周一",17);
+    p.name = "周二"
+    console.log(p.name);
+  }
+  var p2 = new Person("周三",19);
+  f2(p2);
+  console.log(p2.name);
+</script>
+</html>

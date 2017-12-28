@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>递归</title>
+</head>
+<body>
+  
+</body>
+<script>
+  //函数自身调用自身
+  //在写递归的时候，如果不写条件，会形成死递归
+  var i= 0;
+  function fn1() {
+    console.log("fn1");
+    i ++ ;
+    // fn1(); 注意：这样写会形成死递归
+    if (i < 10){
+      fn1();
+    }
+  }
+  fn1();
+</script>
+</html>

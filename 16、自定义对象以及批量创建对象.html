@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自定义对象以及批量创建对象</title>
+</head>
+<body>
+  
+</body>
+<script>
+  //自定义对象
+  //自己创建一个对象(有姓名、年龄、性别、会打招呼)
+  var student = new Object();
+  student.name = "周五";
+  student.age = 19;
+  student.gender = "男";
+  //student["say-hi"]; //这种带有连字符的只能通过中括号
+  student.sayHi = function() {
+    console.log("Hello ,my name is" + " " + this.name)
+  }
+  student["sayHi"]();//调用方法函数
+console.log("---------一条任性的分隔线------------")
+  //批量创建对象
+  function createStudent(name,age,gender) {
+    var stu = new Object();
+    stu.name = name;
+    stu.age = age;
+    stu.gender = gender;
+    stu.sayHi = function (){
+      console.log("hi，我是"+ this.name);
+    }
+    return stu;
+  }
+  var s1 = createStudent("周一",18,"女");
+  var s2 = createStudent("周二",19,"男");
+  console.log(s1);
+  console.log(s2);
+  // s2["sayHi"]()
+  s2.sayHi();
+</script>
+</html>

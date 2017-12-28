@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>函数的练习</title>
+</head>
+<body>
+  
+</body>
+<script>
+  function getMax(a,b){
+    return a > b? a:b;
+  }
+  var max = getMax(3,5);
+  console.log(max);
+  function getMax3(a,b,c){
+    return (a>b? a:b) > c? (a>b? a:b):c;
+  }
+  var max1 = getMax3(9,6,8);
+  console.log(max1);
+  //求数组中的最小值
+  var arr = [1,6,8,9,7,0];
+  function getMin(arr){
+    var min = arr[0];
+    for (var i = 1;i < arr.length;i++){
+      if(min > arr[i]){
+        min = arr[i];
+      }
+    }
+    return min;
+  }
+  console.log(getMin(arr));
+  //翻转数组
+  // var arr1 = arr.reverse();
+  // console.log(arr1);
+  function reverse(arr) {
+    var newArr = [];
+    for(var i = arr.length-1;i >= 0;i--){
+      newArr[newArr.length] = arr[i];
+    }
+    return newArr;
+  }
+  console.log(reverse(arr));
+</script>
+</html>
